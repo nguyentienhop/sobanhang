@@ -27,6 +27,11 @@ export default function Verification({route, navigation}) {
       return;
     }, 1000);
   };
+  const handleNext = () => {
+    navigation.navigate('TabThuChi', {
+      phone,
+    });
+  };
   timeCode();
   return (
     <View style={styles.container}>
@@ -82,6 +87,7 @@ export default function Verification({route, navigation}) {
       {/* Btn Bottom */}
       <View style={styles.btnBottom}>
         <TouchableOpacity
+          onPress={handleNext}
           disabled={code.length > 0 ? false : true}
           style={[
             styles.touchBtnTiepTuc,

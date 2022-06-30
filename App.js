@@ -9,9 +9,9 @@
 import React from 'react';
 import Login from './Screen/Login';
 import Verification from './Screen/Verification';
-import ThuChi from './Screen/ThuChi';
-// import {NavigationContainer} from '@react-navigation/native';
-// import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {
   SafeAreaView,
@@ -22,17 +22,20 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import TabThuChi from './Screen/TabThuChi';
+import TabSoNo from './Screen/TabSoNo';
 
-// const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 const App = () => {
   return (
-    <ThuChi />
+    <TabSoNo />
     // <NavigationContainer>
     //   <Stack.Navigator
     //     screenOptions={{headerShown: false}}
     //     initialRouteName="Login">
     //     <Stack.Screen name="Login" component={Login} />
     //     <Stack.Screen name="Verification" component={Verification} />
+    //     <Stack.Screen name="TabThuChi" component={TabThuChi} />
     //   </Stack.Navigator>
     // </NavigationContainer>
   );
